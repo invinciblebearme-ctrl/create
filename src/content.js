@@ -15,9 +15,9 @@ export const chatbotConfig = {
   name: 'CREATE AI 수업 챗봇',
   badge: '실시간 AI 도우미',
   welcomeMessage: '안녕하세요! CREATE 모형 연구학교 수업 설계와 자료에 대해 궁금한 점을 언제든 물어보세요 ✨',
-  url: 'https://create-helper.kiss3927k.workers.dev/?v=1', // 기본값: 수업 설계 도우미
+  url: 'https://create.allforedu.kr/chatbot', // 수업 챗봇 주소
   quickQuestions: [
-    { label: '🧩 수업 설계 도우미 바로가기', actionUrl: 'https://create-helper.kiss3927k.workers.dev/?v=1' },
+    { label: '🤖 CREATE AI 수업 챗봇 바로가기', actionUrl: 'https://create.allforedu.kr/chatbot' },
     { label: '📘 단원설계 길잡이 전자책 보기', targetId: 'guide' },
     { label: '📚 학년별 설계안 모음 보기', targetId: 'grades' },
     { label: '🎨 연구학교 교수학습 자료실', targetId: 'resources' }
