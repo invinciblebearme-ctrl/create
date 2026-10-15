@@ -60,7 +60,7 @@ function App() {
           <h1>함께 설계하고,<br /><span>배움을 CREATE하다</span></h1>
           <p>CREATE 모형의 수업 설계 자료부터 LEMONADE 프로그램 실천 사례까지<br className="desktop-break" /> 연구학교의 배움을 한곳에서 만나보세요.</p>
           <div className="hero-actions">
-            {/* <button className="primary-btn" onClick={() => go('library')}>자료 둘러보기 <ArrowRight size={18} /></button> */}
+            <button className="primary-btn" onClick={() => go('library')}>자료 둘러보기 <ArrowRight size={18} /></button>
             <button className="secondary-hero-btn" onClick={() => { setChatOpen(true); setShowTooltip(false); }}>
               <Bot size={17} /> <span>AI 챗봇 질문하기</span>
             </button>
