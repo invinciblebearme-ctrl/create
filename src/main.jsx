@@ -41,7 +41,6 @@ function App() {
       <nav className={menu ? 'nav open' : 'nav'} aria-label="주 메뉴">
         <button onClick={() => go('top')}>홈</button>
         <button onClick={() => go('library')}>자료 둘러보기</button>
-        <button onClick={() => go('about')}>이용 안내</button>
         <button className="nav-chatbot-btn" onClick={() => { setChatOpen(true); setShowTooltip(false); setMenu(false); }}>
           <Bot size={15} /> AI 챗봇
         </button>
@@ -92,9 +91,9 @@ function App() {
       <section className="library" id="library">
         <div className="section-top">
           <div>
-            <span className="kicker">EXPLORE CONTENTS</span>
+            <span className="kicker">EXPLORE & HOW TO USE</span>
             <h2>연구학교 자료 둘러보기 <span className="sparkle">✦</span></h2>
-            <p>필요한 자료를 골라 편리하게 살펴보세요.</p>
+            <p>원하는 콘텐츠 카드를 선택해 자료를 확인하세요. PDF 전자책, 웹앱, 교수학습 자료실과 영상으로 바로 연결됩니다.</p>
           </div>
           <span className="section-badge">6개의 자료 영역</span>
         </div>
@@ -141,16 +140,6 @@ function App() {
             <button onClick={() => { setFilter('all'); setQuery('') }}>전체 자료 보기</button>
           </div>
         )}
-      </section>
-
-      <section className="about" id="about">
-        <div className="about-icon">💡</div>
-        <div>
-          <span className="kicker">HOW TO USE</span>
-          <h2>이렇게 이용해 보세요!</h2>
-          <p>원하는 콘텐츠를 선택해 자료를 확인하세요. PDF 전자책, 웹앱, 교수학습 자료실과 홍보 영상은 각 콘텐츠가 준비되는 대로 연결됩니다.</p>
-        </div>
-        <button onClick={() => go('library')}>콘텐츠 보기 <ArrowRight size={17} /></button>
       </section>
     </main>
 
