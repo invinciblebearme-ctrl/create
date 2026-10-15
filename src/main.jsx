@@ -91,9 +91,9 @@ function App() {
       <section className="library" id="library">
         <div className="section-top">
           <div>
-            <span className="kicker">EXPLORE & HOW TO USE</span>
+            <span className="kicker">EXPLORE CONTENTS</span>
             <h2>연구학교 자료 둘러보기 <span className="sparkle">✦</span></h2>
-            <p>원하는 콘텐츠 카드를 선택해 자료를 확인하세요. PDF 전자책, 웹앱, 교수학습 자료실과 영상으로 바로 연결됩니다.</p>
+            <p>연구학교에서 개발한 단원설계안, 수업도우미, 교수학습 자료를 편리하게 둘러보세요.</p>
           </div>
           <span className="section-badge">6개의 자료 영역</span>
         </div>
