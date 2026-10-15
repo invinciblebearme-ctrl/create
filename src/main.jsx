@@ -57,7 +57,7 @@ function App() {
         <span className="floating f2" aria-hidden="true">📚</span>
         <span className="floating f3" aria-hidden="true">✨</span>
         <div className="hero-inner">
-          <span className="eyebrow">✦ CREATE RESEARCH SCHOOL ✦</span>
+          <span className="eyebrow">✦ AI DIGITAL RESEARCH SCHOOL ✦</span>
           <h1>함께 설계하고,<br /><span>배움을 CREATE하다</span></h1>
           <p>CREATE 모형의 수업 설계 자료부터 LEMONADE 프로그램 실천 사례까지<br className="desktop-break" /> 연구학교의 배움을 한곳에서 만나보세요.</p>
           <div className="hero-actions">
