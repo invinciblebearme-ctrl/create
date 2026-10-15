@@ -8,3 +8,18 @@ export const contents = [
   {id:'video',number:'05',icon:'🎬',title:'연구학교 홍보 영상',subtitle:'연구학교의 실천 이야기',description:'연구학교의 운영 과정과 수업 실천 모습을 영상으로 소개합니다.',type:'영상',group:'media',color:'pink',url:''},
   {id:'lesson',number:'06',icon:'📖',title:'CREATE 모형 실증수업 지도안',subtitle:'수업 실천을 담은 지도안',description:'CREATE 모형을 적용한 실증수업 지도안을 전자책 형태로 살펴봅니다.',type:'PDF 전자책',group:'ebook',color:'aqua',url:''}
 ];
+
+// 플로팅 챗봇 연동 설정
+// url: '' = 준비 중 / url: 'https://...' = 외부 챗봇 링크
+export const chatbotConfig = {
+  name: 'CREATE AI 수업 챗봇',
+  badge: '실시간 AI 도우미',
+  welcomeMessage: '안녕하세요! CREATE 모형 연구학교 수업 설계와 자료에 대해 궁금한 점을 언제든 물어보세요 ✨',
+  url: 'https://create-helper.kiss3927k.workers.dev/?v=1', // 기본값: 수업 설계 도우미
+  quickQuestions: [
+    { label: '🧩 수업 설계 도우미 바로가기', actionUrl: 'https://create-helper.kiss3927k.workers.dev/?v=1' },
+    { label: '📘 단원설계 길잡이 전자책 보기', targetId: 'guide' },
+    { label: '📚 학년별 설계안 모음 보기', targetId: 'grades' },
+    { label: '🎨 연구학교 교수학습 자료실', targetId: 'resources' }
+  ]
+};
