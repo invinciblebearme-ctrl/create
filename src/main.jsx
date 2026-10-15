@@ -61,7 +61,7 @@ function App() {
           <h1>함께 설계하고,<br /><span>배움을 CREATE하다</span></h1>
           <p>CREATE 모형의 수업 설계 자료부터 LEMONADE 프로그램 실천 사례까지<br className="desktop-break" /> 연구학교의 배움을 한곳에서 만나보세요.</p>
           <div className="hero-actions">
-            <button className="primary-btn" onClick={() => go('library')}>자료 둘러보기 <ArrowRight size={18} /></button>
+            {/* <button className="primary-btn" onClick={() => go('library')}>자료 둘러보기 <ArrowRight size={18} /></button> */}
             <button className="secondary-hero-btn" onClick={() => { setChatOpen(true); setShowTooltip(false); }}>
               <Bot size={17} /> <span>AI 챗봇 질문하기</span>
             </button>
@@ -93,7 +93,7 @@ function App() {
         <div className="section-top">
           <div>
             <span className="kicker">EXPLORE CONTENTS</span>
-            <h2>CREATE 자료 둘러보기 <span className="sparkle">✦</span></h2>
+            <h2>연구학교 자료 둘러보기 <span className="sparkle">✦</span></h2>
             <p>필요한 자료를 골라 편리하게 살펴보세요.</p>
           </div>
           <span className="section-badge">6개의 자료 영역</span>
@@ -157,7 +157,7 @@ function App() {
     <footer>
       <div className="shell footer-inner">
         <div>
-          <strong>✳ CREATE 모형 연구학교</strong>
+          <strong>✳ 2026 교육부 요청 전북특별자치도교육청지정 AI 디지털 활용 연구학교 군산초등학교</strong>
           <p>수업의 성장과 배움의 나눔을 위한 성과 공유 공간</p>
         </div>
         <span>© CREATE Research School</span>
