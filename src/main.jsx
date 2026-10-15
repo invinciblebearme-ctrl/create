@@ -11,6 +11,7 @@ function App() {
   const [query, setQuery] = useState('');
   const [selected, setSelected] = useState(null);
   const [menu, setMenu] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(true);
 
   const shown = contents.filter(c => (filter === 'all' || c.group === filter) && [c.title, c.subtitle, c.description, c.type].join(' ').toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
@@ -41,7 +42,7 @@ function App() {
         <button onClick={() => go('top')}>홈</button>
         <button onClick={() => go('library')}>자료 둘러보기</button>
         <button onClick={() => go('about')}>이용 안내</button>
-        <button className="nav-chatbot-btn" onClick={() => { openChatUrl(); setShowTooltip(false); setMenu(false); }}>
+        <button className="nav-chatbot-btn" onClick={() => { setChatOpen(true); setShowTooltip(false); setMenu(false); }}>
           <Bot size={15} /> AI 챗봇
         </button>
       </nav>
@@ -61,7 +62,7 @@ function App() {
           <p>CREATE 모형의 수업 설계 자료부터 LEMONADE 프로그램 실천 사례까지<br className="desktop-break" /> 연구학교의 배움을 한곳에서 만나보세요.</p>
           <div className="hero-actions">
             {/* <button className="primary-btn" onClick={() => go('library')}>자료 둘러보기 <ArrowRight size={18} /></button> */}
-            <button className="secondary-hero-btn" onClick={() => { openChatUrl(); setShowTooltip(false); }}>
+            <button className="secondary-hero-btn" onClick={() => { setChatOpen(true); setShowTooltip(false); }}>
               <Bot size={17} /> <span>AI 챗봇 질문하기</span>
             </button>
           </div>
@@ -163,10 +164,10 @@ function App() {
       </div>
     </footer>
 
-    {/* 플로팅 챗봇 바로가기 */}
+    {/* 플로팅 챗봇 위젯 */}
     <aside className="chatbot-floating" aria-label="CREATE AI 챗봇">
-      {showTooltip && (
-        <div className="chat-tooltip" role="tooltip" onClick={() => { openChatUrl(); setShowTooltip(false); }} title="CREATE AI 수업 챗봇 열기">
+      {showTooltip && !chatOpen && (
+        <div className="chat-tooltip" role="tooltip" onClick={() => { setChatOpen(true); setShowTooltip(false); }}>
           <span className="tooltip-sparkle">✨</span>
           <div className="tooltip-text">
             <strong>궁금한 점이 있으신가요?</strong>
@@ -182,16 +183,77 @@ function App() {
         </div>
       )}
 
+      {chatOpen && (
+        <div className="chat-popover" role="dialog" aria-modal="false" aria-label="CREATE AI 챗봇 창">
+          <div className="chat-popover-header">
+            <div className="chat-bot-info">
+              <div className="bot-avatar">
+                <Bot size={22} />
+                <span className="status-dot" aria-label="온라인"></span>
+              </div>
+              <div>
+                <strong>{chatbotConfig.name}</strong>
+                <span className="bot-status-text">온라인 · 수업 설계 AI 지원</span>
+              </div>
+            </div>
+            <button className="chat-popover-close" onClick={() => setChatOpen(false)} aria-label="챗봇 창 닫기">
+              <X size={18} />
+            </button>
+          </div>
+
+          <div className="chat-popover-body">
+            <div className="chat-bubble-received">
+              <p>{chatbotConfig.welcomeMessage}</p>
+            </div>
+
+            <div className="chat-quick-section">
+              <span className="chat-quick-label">추천 메뉴 바로가기</span>
+              <div className="chat-quick-chips">
+                {chatbotConfig.quickQuestions.map((q, idx) => (
+                  <button
+                    key={idx}
+                    className="quick-chip"
+                    onClick={() => {
+                      if (q.actionUrl) {
+                        window.open(q.actionUrl, q.actionUrl.startsWith('http') ? '_blank' : '_self', 'noopener,noreferrer');
+                      } else if (q.targetId) {
+                        const item = contents.find(c => c.id === q.targetId);
+                        if (item) open(item);
+                      }
+                    }}
+                  >
+                    <span>{q.label}</span>
+                    <ArrowUpRight size={14} className="quick-chip-arrow" />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="chat-info-card">
+              <p>💡 CREATE 모형 수업 아이디어 구체화와 과정안 작성을 AI 도우미가 즉시 도와드립니다.</p>
+            </div>
+          </div>
+
+          <div className="chat-popover-footer">
+            <button className="chat-primary-action" onClick={openChatUrl}>
+              <Bot size={16} />
+              <span>AI 챗봇 질문하기</span>
+              <ExternalLink size={16} />
+            </button>
+          </div>
+        </div>
+      )}
+
       <button
-        className="chatbot-fab"
-        onClick={() => { openChatUrl(); setShowTooltip(false); }}
-        aria-label="CREATE AI 수업 챗봇 바로가기 (새 탭)"
-        title="CREATE AI 수업 챗봇 바로가기"
+        className={`chatbot-fab ${chatOpen ? 'active' : ''}`}
+        onClick={() => { setChatOpen(!chatOpen); setShowTooltip(false); }}
+        aria-label={chatOpen ? '챗봇 창 닫기' : 'CREATE AI 챗봇 열기'}
+        aria-expanded={chatOpen}
       >
         <div className="fab-icon-wrap">
-          <Bot size={28} />
+          {chatOpen ? <X size={26} /> : <Bot size={28} />}
         </div>
-        <span className="fab-badge">AI</span>
+        {!chatOpen && <span className="fab-badge">AI</span>}
       </button>
     </aside>
 

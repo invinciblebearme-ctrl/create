@@ -25,9 +25,10 @@ export const chatbotConfig = {
   welcomeMessage: '안녕하세요! CREATE 모형 연구학교 수업 설계와 자료에 대해 궁금한 점을 언제든 물어보세요 ✨',
   url: 'https://create.allforedu.kr/chatbot', // 수업 챗봇 주소
   quickQuestions: [
-    { label: '🤖 CREATE AI 수업 챗봇 바로가기', actionUrl: 'https://create.allforedu.kr/chatbot' },
-    { label: '📘 단원설계 길잡이 전자책 보기', targetId: 'guide' },
-    { label: '📚 학년별 설계안 모음 보기', targetId: 'grades' },
-    { label: '🎨 연구학교 교수학습 자료실', targetId: 'resources' }
+    { label: '📘 01. 수업설계 길잡이 전자책', targetId: 'guide' },
+    { label: '🧩 02. 수업 설계 도우미 (웹앱)', targetId: 'designer' },
+    { label: '🎨 03. 연구학교 교수학습 제작자료실', targetId: 'resources' },
+    { label: '📚 04. 학년별 단원설계안 서재', targetId: 'grades' },
+    { label: '📖 05. 교과전담 수업지도안', targetId: 'lesson' }
   ]
 };
