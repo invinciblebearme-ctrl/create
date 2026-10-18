@@ -70,3 +70,49 @@
   .hero-actions button{width:100%}
 }
 
+
+/* Navigation Guide Link */
+.nav-guide-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0f4ff;
+  color: #4b63be;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 800;
+  font-size: 13px;
+  border: 1px solid #d4e0fa;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+.nav-guide-link:hover {
+  background: #e2ebff;
+  color: #3249a1;
+  border-color: #bccbf5;
+  transform: translateY(-1px);
+}
+
+/* Hero Guide Button */
+.hero-guide-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #5369c7;
+  color: #ffffff;
+  border: 1px solid #485eb9;
+  border-radius: 14px;
+  padding: 13px 21px;
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(74, 98, 189, 0.25);
+  transition: all .18s ease;
+}
+.hero-guide-btn:hover {
+  background: #4359b3;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(74, 98, 189, 0.35);
+}

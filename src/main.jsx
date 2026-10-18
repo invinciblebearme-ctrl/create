@@ -41,6 +41,16 @@ function App() {
       <nav className={menu ? 'nav open' : 'nav'} aria-label="주 메뉴">
         <button onClick={() => go('top')}>홈</button>
         <button onClick={() => go('library')}>자료 둘러보기</button>
+        <a
+          href="https://create.allforedu.kr/curriculum/#/read/create-doc-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-guide-link"
+          onClick={() => setMenu(false)}
+          title="CREATE 모형 수업설계 길잡이 3D 플립북 전자책 열기"
+        >
+          📘 수업설계 길잡이
+        </a>
         <button className="nav-chatbot-btn" onClick={() => { setChatOpen(true); setShowTooltip(false); setMenu(false); }}>
           <Bot size={15} /> AI 챗봇
         </button>
@@ -61,6 +71,16 @@ function App() {
           <p>CREATE 모형의 수업 설계 자료부터 LEMONADE 프로그램 실천 사례까지<br className="desktop-break" /> 연구학교의 배움을 한곳에서 만나보세요.</p>
           <div className="hero-actions">
             <button className="primary-btn" onClick={() => go('library')}>자료 둘러보기 <ArrowRight size={18} /></button>
+            <a
+              href="https://create.allforedu.kr/curriculum/#/read/create-doc-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-guide-btn"
+              title="CREATE 모형 수업설계 길잡이 3D 플립북 전자책 열기"
+            >
+              <span>📘 단원·수업설계 길잡이</span>
+              <ArrowUpRight size={16} />
+            </a>
             <button className="secondary-hero-btn" onClick={() => { setChatOpen(true); setShowTooltip(false); }}>
               <Bot size={17} /> <span>AI 챗봇 질문하기</span>
             </button>
