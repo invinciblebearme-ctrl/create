@@ -14,7 +14,7 @@ export const contents = [
 export const chatbotConfig = {
   name: 'CREATE AI 수업 챗봇',
   badge: '실시간 AI 도우미',
-  welcomeMessage: '안녕하세요! CREATE 모형 연구학교 수업 설계와 자료에 대해 궁금한 점을 언제든 물어보세요.',
+  welcomeMessage: '안녕하세요! AI 디지털 활용 연구학교 수업 설계와 자료에 대해 궁금한 점을 언제든 물어보세요.',
   url: 'https://create.allforedu.kr/chatbot', // 수업 챗봇 주소
   quickQuestions: [
     { label: '📖 01. 수업설계 길잡이 전자책', targetId: 'guide' },
