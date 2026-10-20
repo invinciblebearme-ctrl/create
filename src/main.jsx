@@ -14,7 +14,15 @@ function App() {
   const [chatOpen, setChatOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(true);
 
-  const shown = contents.filter(c => (filter === 'all' || c.group === filter) && [c.title, c.subtitle, c.description, c.type].join(' ').toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
+  const cleanQ = query.trim().toLocaleLowerCase();
+  const cleanQNoSpace = cleanQ.replace(/\s+/g, '');
+  const shown = contents.filter(c => {
+    if (filter !== 'all' && c.group !== filter) return false;
+    if (!cleanQ) return true;
+    const text = [c.title, c.subtitle, c.description, c.type].join(' ').toLocaleLowerCase();
+    const textNoSpace = text.replace(/\s+/g, '');
+    return text.includes(cleanQ) || (cleanQNoSpace && textNoSpace.includes(cleanQNoSpace));
+  });
   const go = (id) => { document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }); setMenu(false) };
   const open = (c) => { if (c.url) { window.open(c.url, c.url.startsWith('http') ? '_blank' : '_self', c.url.startsWith('http') ? 'noopener,noreferrer' : undefined) } else setSelected(c) };
 

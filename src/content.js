@@ -1,20 +1,12 @@
 // 추후 콘텐츠 링크만 바꾸면 메인 페이지의 버튼이 자동으로 활성화됩니다.
 // url: '' = 준비 중 / url: 'https://...' = 외부 링크 / url: '/path' = 내부 링크
-// export const contents = [
-//   {id:'guide',number:'01',icon:'📘',title:'CREATE 모형 단원설계 길잡이',subtitle:'모형의 이해부터 단원 설계까지',description:'CREATE 모형을 이해하고 단원을 설계하는 데 필요한 안내 자료를 전자책으로 살펴봅니다.',type:'PDF 전자책',group:'ebook',color:'blue',url:'https://create.allforedu.kr/curriculum/#/read/create-doc-1'},
-//   {id:'grades',number:'02',icon:'📚',title:'CREATE 모형 학년별 단원설계안',subtitle:'학년별 설계 사례를 한곳에',description:'학년별 CREATE 모형 단원설계안을 모아 학년과 자료를 선택해 열람합니다.',type:'학년별 PDF 서재',group:'ebook',color:'mint',url:'https://create.allforedu.kr/curriculum/'},
-//   {id:'designer',number:'03',icon:'🧩',title:'CREATE 모형 수업 설계 도우미',subtitle:'수업 아이디어를 설계로 연결',description:'CREATE 모형 기반의 수업 아이디어를 체계적인 수업 과정안으로 설계할 수 있는 웹앱 도우미입니다.',type:'웹앱',group:'tool',color:'peach',url:'https://create-helper.kiss3927k.workers.dev/?v=1'},
-//   {id:'resources',number:'04',icon:'🎨',title:'연구학교 교수학습 제작자료',subtitle:'수업에 활용하는 디지털 자료 모음',description:'패들렛에 정리된 교수학습 자료를 학년·교과·주제별로 찾아보고 활용합니다.',type:'자료실',group:'tool',color:'lavender',url:'https://create.allforedu.kr/resources'},
-//   {id:'video',number:'05',icon:'🎬',title:'연구학교 홍보 영상',subtitle:'연구학교의 실천 이야기',description:'연구학교의 운영 과정과 수업 실천 모습을 영상으로 소개합니다.',type:'영상',group:'media',color:'pink',url:''},
-//   {id:'lesson',number:'06',icon:'📖',title:'CREATE 모형 실증수업 지도안',subtitle:'수업 실천을 담은 지도안',description:'CREATE 모형을 적용한 실증수업 지도안을 전자책 형태로 살펴봅니다.',type:'PDF 전자책',group:'ebook',color:'aqua',url:''}
-// ];
 export const contents = [
-  { id: 'guide', number: '01', icon: '📘', title: 'CREATE 모형 수업설계 길잡이', subtitle: '모형의 이해부터 단원 설계까지', description: 'CREATE 모형을 이해하고 단원을 설계하는 데 필요한 안내 자료를 전자책으로 살펴봅니다.', type: 'PDF 전자책', group: 'ebook', color: 'blue', url: 'https://create.allforedu.kr/curriculum/#/read/create-doc-1' },
-  { id: 'designer', number: '02', icon: '🧩', title: 'CREATE 모형 수업 설계 도우미', subtitle: '수업 아이디어를 설계로 연결', description: 'CREATE 모형 기반의 수업 아이디어를 체계적인 수업 과정안으로 설계할 수 있는 웹앱 도우미입니다.', type: '웹앱', group: 'tool', color: 'peach', url: 'https://create.allforedu.kr/designer' },
-  { id: 'resources', number: '03', icon: '🎨', title: '연구학교 교수학습 제작자료', subtitle: '수업에 활용하는 디지털 자료 모음', description: '패들렛에 정리된 교수학습 자료를 학년·교과·주제별로 찾아보고 활용합니다.', type: '자료실', group: 'tool', color: 'lavender', url: 'https://create.allforedu.kr/resources' },
+  { id: 'guide', number: '01', icon: '📖', title: 'CREATE 모형 수업설계 길잡이', subtitle: '모형의 이해부터 단원 설계까지', description: 'CREATE 모형을 이해하고 단원을 설계하는 데 필요한 안내 자료를 전자책으로 살펴봅니다.', type: 'PDF 전자책', group: 'ebook', color: 'blue', url: 'https://create.allforedu.kr/curriculum/#/read/create-doc-1' },
+  { id: 'designer', number: '02', icon: '🛠️', title: 'CREATE 모형 수업 설계 도우미', subtitle: '수업 아이디어를 설계로 연결', description: 'CREATE 모형 기반의 수업 아이디어를 체계적인 수업 과정안으로 설계할 수 있는 웹앱 도우미입니다.', type: '웹앱', group: 'tool', color: 'peach', url: 'https://create.allforedu.kr/designer' },
+  { id: 'resources', number: '03', icon: '📁', title: '연구학교 교수학습 제작자료실', subtitle: '수업에 활용하는 다양한 자료 모음', description: '패들렛에 정리된 교수학습 자료를 학년·교과·주제별로 찾아보고 활용합니다.', type: '자료실', group: 'tool', color: 'lavender', url: 'https://create.allforedu.kr/resources' },
   { id: 'grades', number: '04', icon: '📚', title: 'CREATE 모형 학년별 단원설계안', subtitle: '학년별 설계 사례를 한곳에', description: '학년별 CREATE 모형 단원설계안을 모아 학년과 자료를 선택해 열람합니다.', type: '학년별 PDF 서재', group: 'ebook', color: 'mint', url: 'https://create.allforedu.kr/curriculum/' },
-  { id: 'lesson', number: '05', icon: '📖', title: 'CREATE 모형 교과전담 수업지도안', subtitle: '수업 실천을 담은 지도안', description: 'CREATE 모형을 적용한 실증수업 지도안을 전자책 형태로 살펴봅니다.', type: 'PDF 전자책', group: 'ebook', color: 'aqua', url: 'https://create.allforedu.kr/curriculum2' },
-  { id: 'video', number: '06', icon: '🎬', title: '연구학교 홍보 영상', subtitle: '연구학교의 실천 이야기', description: '연구학교의 운영 과정과 수업 실천 모습을 영상으로 소개합니다.', type: '영상', group: 'media', color: 'pink', url: '' },
+  { id: 'lesson', number: '05', icon: '📖', title: 'CREATE 모형 교과전담 수업지도안', subtitle: '수업 실천을 이끈 지도안', description: 'CREATE 모형을 적용한 실증수업 지도안을 전자책 형태로 살펴봅니다.', type: 'PDF 전자책', group: 'ebook', color: 'aqua', url: 'https://create.allforedu.kr/curriculum2' },
+  { id: 'video', number: '06', icon: '🎬', title: '연구학교 홍보 영상관', subtitle: '연구학교의 실천 이야기', description: '연구학교의 운영 과정과 수업 실천 모습을 담은 공식 홍보영상관입니다.', type: '영상관', group: 'media', color: 'pink', url: 'https://create.allforedu.kr/videos' },
 ];
 
 // 플로팅 챗봇 연동 설정
@@ -22,13 +14,14 @@ export const contents = [
 export const chatbotConfig = {
   name: 'CREATE AI 수업 챗봇',
   badge: '실시간 AI 도우미',
-  welcomeMessage: '안녕하세요! CREATE 모형 연구학교 수업 설계와 자료에 대해 궁금한 점을 언제든 물어보세요 ✨',
+  welcomeMessage: '안녕하세요! CREATE 모형 연구학교 수업 설계와 자료에 대해 궁금한 점을 언제든 물어보세요.',
   url: 'https://create.allforedu.kr/chatbot', // 수업 챗봇 주소
   quickQuestions: [
-    { label: '📘 01. 수업설계 길잡이 전자책', targetId: 'guide' },
-    { label: '🧩 02. 수업 설계 도우미 (웹앱)', targetId: 'designer' },
-    { label: '🎨 03. 연구학교 교수학습 제작자료실', targetId: 'resources' },
+    { label: '📖 01. 수업설계 길잡이 전자책', targetId: 'guide' },
+    { label: '🛠️ 02. 수업 설계 도우미 (웹앱)', targetId: 'designer' },
+    { label: '📁 03. 연구학교 교수학습 제작자료실', targetId: 'resources' },
     { label: '📚 04. 학년별 단원설계안 서재', targetId: 'grades' },
-    { label: '📖 05. 교과전담 수업지도안', targetId: 'lesson' }
+    { label: '📖 05. 교과전담 수업지도안', targetId: 'lesson' },
+    { label: '🎬 06. 연구학교 홍보 영상관', targetId: 'video', actionUrl: 'https://create.allforedu.kr/videos' }
   ]
 };
