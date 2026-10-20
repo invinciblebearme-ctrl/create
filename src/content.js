@@ -18,7 +18,7 @@ export const chatbotConfig = {
   url: 'https://create.allforedu.kr/chatbot', // 수업 챗봇 주소
   quickQuestions: [
     { label: '📖 01. 수업설계 길잡이 전자책', targetId: 'guide' },
-    { label: '🛠️ 02. 수업 설계 도우미 (웹앱)', targetId: 'designer' },
+    { label: '🛠️ 02. 수업 설계 도우미', targetId: 'designer' },
     { label: '📁 03. 연구학교 교수학습 제작자료실', targetId: 'resources' },
     { label: '📚 04. 학년별 단원설계안 서재', targetId: 'grades' },
     { label: '📖 05. 교과전담 수업지도안', targetId: 'lesson' },
