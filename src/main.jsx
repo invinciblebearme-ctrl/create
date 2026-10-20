@@ -177,7 +177,7 @@ function App() {
           <strong>✳ 2026 교육부 요청 전북특별자치도교육청지정 AI 디지털 활용 연구학교 군산초등학교</strong>
           <p>수업의 성장과 배움의 나눔을 위한 성과 공유 공간</p>
         </div>
-        <span>© CREATE Research School</span>
+        <span>© AI DIGiTAL Research School</span>
       </div>
     </footer>
 
